@@ -3,7 +3,7 @@
 All programs presented in this repository are compilable with gcc and g++ without any warnings.
 
 # Cache access
-'''C
+```C
 #include <stdio.h>
 
 int main() {
@@ -18,11 +18,11 @@ int main() {
 
   return 0;
 }
-'''
+```
 
-'''
+```
 Output:
 0
 987654321
 123456789
-'''
+```
