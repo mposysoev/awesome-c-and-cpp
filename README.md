@@ -1,6 +1,6 @@
 # Awesome C and C++
 
-All programs presented in this repository are compilable with gcc and g++ without any warnings.
+All programs presented in this repository are compilable with [GCC](https://gcc.gnu.org/) and [G++](https://gcc.gnu.org/) without any warnings.
 
 ## Cache access
 ```C
@@ -123,3 +123,7 @@ Output:
 ```
 
 This program adds two large positive numbers, but the return equals a small negative number.
+
+# Conclusion 
+
+Using the [Clang](https://clang.llvm.org/) compiler allows you to receive warnings when compiling these programs. The use of the [Rust language](https://www.rust-lang.org/) makes it impossible to compile equivalent programs.
