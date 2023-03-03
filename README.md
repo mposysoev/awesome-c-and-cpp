@@ -3,6 +3,7 @@
 All programs presented in this repository are compilable with [GCC](https://gcc.gnu.org/) and [G++](https://gcc.gnu.org/) without any warnings.
 
 ## Cache access
+
 ```C
 #include <stdio.h>
 
@@ -30,6 +31,7 @@ Output:
 Obviously, that`s an incorrect program. The for loop index i is out of bounds, but it's working and show us variables a and b which are not called from loop. The output depends on optimization flags at compile time, the result is repeatable in case of standard settings (-O).
 
 ## Index out of bounds
+
 ```C
 #include <stdio.h>
 
@@ -82,9 +84,10 @@ Output:
 ...
 ```
 
-This program may not start for some unknown reason. But if it starts, it shows the values of neighboring memory cells. 
+This program may not start for some unknown reason. But if it starts, it shows the values of neighboring memory cells.
 
 ## Type conversion
+
 ```C
 #include <stdio.h>
 
@@ -124,6 +127,6 @@ Output:
 
 This program adds two large positive numbers, but the return equals a small negative number.
 
-# Conclusion 
+# Conclusion
 
 Using the [Clang](https://clang.llvm.org/) compiler allows you to receive warnings when compiling these programs. The use of the [Rust language](https://www.rust-lang.org/) makes it impossible to compile equivalent programs.

@@ -1,10 +1,12 @@
 #include <iostream>
 
-int main() {
-  while(1)
-    ;
+int main()
+{
+    while (1)
+        ;
 }
 
-void unreachable(){
-  std::cout << "Hello, World!" << std::endl;
+void unreachable()
+{
+    std::cout << "Hello, World!" << std::endl;
 }
