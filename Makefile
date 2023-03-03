@@ -1,30 +1,38 @@
-CC=gcc-12
-CLANG=clang
+CC=g++-12
+CLANG=clang++
 CFLAGS=-Wall -Wextra -pedantic
 
-cache:
-	$(CC) cache_access.c $(CFLAGS) -o cache_access.out
+gccbuild:
+	$(CC) cache_access.cpp -o cache_access.out
+	$(CC) different.cpp -o different.out
+	$(CC) entry_point.cpp -o entry_point.out
+	$(CC) index_out_of_bounds.cpp -o index_out_of_bounds.out
+	$(CC) type_conversion.cpp -o type_conversion.out
+	$(CC) type_overflow.cpp -o type_overflow.out
 
-bounds:
-	$(CC) index_out_of_bounds.c $(CFLAGS) -o index_out_of_bounds.out
+gccbuildwarnings:
+	$(CC) cache_access.cpp $(CFLAGS) -o cache_access.out
+	$(CC) different.cpp $(CFLAGS) -o different.out
+	$(CC) entry_point.cpp $(CFLAGS) -o entry_point.out
+	$(CC) index_out_of_bounds.cpp $(CFLAGS) -o index_out_of_bounds.out
+	$(CC) type_conversion.cpp $(CFLAGS) -o type_conversion.out
+	$(CC) type_overflow.cpp $(CFLAGS) -o type_overflow.out
 
-overflow:
-	$(CC) type_overflow.c $(CFLAGS) -o type_overflow.out
+clangbuild:
+	$(CLANG) cache_access.cpp -o clang-cache_access.out
+	$(CLANG) different.cpp -o clang-different.out
+	$(CLANG) entry_point.cpp -o clang-entry_point.out
+	$(CLANG) index_out_of_bounds.cpp -o clang-index_out_of_bounds.out
+	$(CLANG) type_conversion.cpp -o clang-type_conversion.out
+	$(CLANG) type_overflow.cpp -o clang-type_overflow.out
 
-conversion:
-	$(CC) type_conversion.c $(CFLAGS) -o type_conversion.out
-
-clang-cache:
-	$(CLANG) cache_access.c $(CFLAGS) -o clang-cache_access.out
-
-clang-bounds:
-	$(CLANG) index_out_of_bounds.c $(CFLAGS) -o clang-index_out_of_bounds.out
-
-clang-overflow:
-	$(CLANG) type_overflow.c $(CFLAGS) -o clang-type_overflow.out
-
-clang-conversion:
-	$(CLANG) type_conversion.c $(CFLAGS) -o clang-type_conversion.out
+clangbuildwarnings:
+	$(CLANG) cache_access.cpp $(CFLAGS) -o clang-cache_access.out
+	$(CLANG) different.cpp $(CFLAGS) -o clang-different.out
+	$(CLANG) entry_point.cpp $(CFLAGS) -o clang-entry_point.out
+	$(CLANG) index_out_of_bounds.cpp $(CFLAGS) -o clang-index_out_of_bounds.out
+	$(CLANG) type_conversion.cpp $(CFLAGS) -o clang-type_conversion.out
+	$(CLANG) type_overflow.cpp $(CFLAGS) -o clang-type_overflow.out
 
 clean:
 		rm -f *.out
